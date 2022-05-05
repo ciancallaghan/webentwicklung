@@ -1,0 +1,110 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #d4d4d4;
+    display: grid;
+    grid-template-rows: 5% 5% auto;
+    grid-template-columns: auto;
+}
+
+header {
+    background-color: #89ffdd;
+    width: 100%;
+    border: 1px solid #28bca4;
+    padding: 0.25em;
+    font-size: small;
+    grid-row: 1 / 2;
+}
+
+.navbar {
+    grid-row: 2 / 3;
+    border: 1px solid #28bca4;
+    display: grid;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+ul li:hover {
+    background-color: #111;
+}
+
+@media screen and (max-width: 600px) {
+    ul li.right,
+    ul li {
+	float: none;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #eee;
+    margin: 15% auto;
+    max-width: 50%;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+.student_page {
+    background-color: #fafafa;
+    display: none;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #28bca4;
+}
+
+.student_list, .staff_list {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 9fr;
+}
+
+.admin_buttons {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+table {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.staff_page {
+    background-color: #fafafa;
+    display: none;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #28bca4;
+}
+
+form {
+    text-align: center;
+    padding: 2em 1em 2em 1em;
+}

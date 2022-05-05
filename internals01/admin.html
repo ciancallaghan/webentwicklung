@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="./admin.css">
+    </head>
+    <body>
+	<header>
+	    <h1>The Imaginary University</h1>
+	</header>
+	<main>
+	    <div class="navbar">
+		<ul>
+		    <li id="show_home">Home</li>
+		    <li id="show_student">Students</li>
+		    <li id="show_staff">Staff</li>
+		</ul>
+	    </div>
+	    <div class="student_page">
+		<div class="student_list">
+		    <div class="admin_buttons">
+			<button id="add_student">Add Student</button>
+			<button>Update Student</button>
+			<button>Delete Student</button>
+		    </div>
+		    <table>
+			<tr>
+			    <th>Student ID</th>
+			    <th>First Name</th>
+			    <th>Last Name</th>
+			    <th>DOB</th>
+			    <th>Gender</th>
+			    <th>Department</th>
+			    <th>Email</th>
+			</tr>
+		    </table>
+		</div>
+		<div id="add_student_form" class="modal" >
+		    <div class="modal-content">
+			<form>
+			    <label for="student_id">Student ID:</label><br>
+			    <input type="text" name="student_id" required><br>
+			    <label for="firstname">First Name:</label><br>
+			    <input type="text" name="firstname" required><br>
+			    <label for="lastname">Last Name:</label><br>
+			    <input type="text" name="lastname"><br>
+			    <label for="dob">Date of Birth:</label><br>
+			    <input type="date" name="dob"><br>
+			    <label for="gender">Gender:</label><br>
+			    <input type="radio" id="male" name="gender" value="male">
+			    <label for="male">Male</label>
+			    <input type="radio" id="female" name="gender" value="female">
+			    <label for="female">Female</label>
+			    <input type="radio" id="other" name="gender" value="other">
+			    <label for="other">Other</label><br>
+			    <label for="department">Department:</label><br>
+			    <select name="department" required>
+				<option value="1">Energy &amp; Information</option>
+				<option value="2">Technology &amp; Life</option>
+				<option value="3">Business</option>
+				<option value="4">Computing, Communication &amp; Business</option>
+				<option value="5">Design and Culture</option>
+			    </select><br>
+			    <label for="email">E-Mail:</label><br>
+			    <input type="text" name="email" required><br>
+			    <br>
+			    <input type="submit" value="Add">
+			</form>
+		    </div>
+		</div>
+	    </div>
+	    <div class="staff_page">
+		<div class="staff_list">
+		    <div class="admin_buttons">
+			<button id="add_staff">Add Staff</button>
+			<button>Update Staff</button>
+			<button>Delete Staff</button>
+		    </div>
+		    <table>
+			<tr>
+			    <th>Staff ID</th>
+			    <th>First Name</th>
+			    <th>Last Name</th>
+			    <th>DOB</th>
+			    <th>Gender</th>
+			    <th>Email</th>
+			</tr>
+		    </table>
+		</div>
+		<div id="add_staff_form" class="modal">
+		    <div class="modal-content">
+			<form>
+			    <label for="staff_id">Staff ID:</label><br>
+			    <input type="text" name="staff_id" required><br>
+			    <label for="firstname">First Name:</label><br>
+			    <input type="text" name="firstname" required><br>
+			    <label for="lastname">Last Name:</label><br>
+			    <input type="text" name="lastname"><br>
+			    <label for="dob">Date of Birth:</label><br>
+			    <input type="date" name="dob"><br>
+			    <label for="gender">Gender:</label><br>
+			    <input type="radio" id="male" name="gender" value="male">
+			    <label for="male">Male</label>
+			    <input type="radio" id="female" name="gender" value="female">
+			    <label for="female">Female</label>
+			    <input type="radio" id="other" name="gender" value="other">
+			    <label for="other">Other</label><br>
+			    <label for="email">E-Mail:</label><br>
+			    <input type="text" name="email" required><br>
+			    <br>
+			    <input type="submit" value="Add"><br>
+			</form>
+		    </div>
+		</div>
+	    </div>
+	</main>
+	<script src="admin.js"></script>
+    </body>
+</html>

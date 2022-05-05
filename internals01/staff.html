@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<title>Staff Page</title>
+	<link rel="stylesheet" type="text/css" href="./staff.css"
+    </head>
+    <body>
+	<header>
+	    <h1>The Imaginary University</h1>
+	</header>
+	<main>
+	    <div class="navbar">
+		<ul>
+		    <li id="show_home">Home</li>
+		    <li id="show_courses">Courses</li>
+		    <li id="show_students">Students</li>
+		</ul>
+	    </div>
+	    <div class="course_table">
+		<h2>Course Overview</h2>
+		<table>
+		    <tr>
+			<td>Mathematics</td>
+		    </tr>
+		    <tr>
+			<td>Programming</td>
+		    </tr>
+		    <tr>
+			<td>Computer Networks</td>
+		    </tr>
+		</table>
+	    </div>
+	    <div class="student_table">
+		<h2>Course Students</h2>
+		<select id="courses">
+		    <option value="---">---</option>
+		    <option value="mathematics">Mathematics</option>
+		    <option value="programming">Programming</option>
+		    <option value="computer-networks">Computer Networks</option>
+		</select>
+		<table id="mathematics">
+		    <tr>
+			<th>Mathematics</th>
+		    </tr>
+		    <tr>
+			<td>John Doe</td>
+		    </tr>
+		    <tr>
+			<td>Jane Doe</td>
+		    </tr>
+		</table>
+		<table id="programming">
+		    <tr>
+			<th>Programming</th>
+		    </tr>
+		    <tr>
+			<td>John Johnson</td>
+		    </tr>
+		    <tr>
+			<td>Jane Johnson</td>
+		    </tr>
+		</table>
+		<table id="computer_networks">
+		    <tr>
+			<th>Computer Networks</th>
+		    </tr>
+		    <tr>
+			<td>Tim Peters</td>
+		    </tr>
+		    <tr>
+			<td>Lucy Walker</td>
+		    </tr>
+		</table>
+	    </div>
+    </body>
+    <script src="./staff.js"></script>
+</html>

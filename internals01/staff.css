@@ -1,0 +1,72 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #d4d4d4;
+    display: grid;
+    grid-template-rows: 5% 5% auto;
+    grid-template-columns: auto;
+}
+
+header {
+    background-color: #89ffdd;
+    width: 100%;
+    border: 1px solid #26bca4;
+    padding: 0.25em;
+    font-size: small;
+    grid-row: 1 / 2;
+}
+
+.navbar {
+    grid-row: 2 / 3;
+    border: 1px solid #27bca4;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+ul li:hover {
+    background-color: #111;
+}
+
+.course_table, .student_table {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #28bca4;
+    background-color: #fafafa;
+    padding: 1em;
+    margin: 1em;
+}
+
+select {
+    margin: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#mathematics, #programming, #computer_networks {
+    display: none;
+}

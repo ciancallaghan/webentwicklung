@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="./login.css">
+    </head>
+    <body>
+	<header>
+	    <h1>The Imaginary University</h1>
+	</header>
+	<main>
+	    <div class="login_forms">
+		<div class="admin_login">
+		    <h2>Admin Login</h2>
+		    <form>
+			<label for="username">Username</label>
+			<input type="text" id="admin_username" name="username" required>
+			<label for="password">Password</label>
+			<input type="password" id="admin_password" name="password" required>
+			<input type="submit" value="Login" id="admin_submit" class="form_submit" onclick="return login()">
+		    </form>
+		</div>
+		<div class="staff_login">
+		    <h2>Staff Login</h2>
+		    <form>
+			<label for="username">Username</label>
+			<input type="text" id="staff_username" name="username" required>
+			<label for="password">Password</label>
+			<input type="password" id="staff_password" name="password" required>
+			<input type="submit" value="Login" id="staff_submit" class="form_submit" onclick="return login()">
+		    </form>
+		</div>
+	    </div>
+	</main>
+	<script src="./login.js"></script>
+    </body>
+</html>
