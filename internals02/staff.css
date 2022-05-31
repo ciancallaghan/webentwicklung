@@ -1,0 +1,99 @@
+body {
+		background: #E3E3E3;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+}
+
+.container{
+		display: grid;
+		grid-template-columns: 5% 8fr 5%;
+		grid-template-rows: 5% 5% auto;
+}
+
+header{
+		grid-column: 1 / 4;
+		grid-row: 1 / 2;
+		display: inline-block;
+		padding-left: 1em;
+		background: #1D4ED8;
+		color: #FFFFFF;
+}
+
+header a{
+		text-decoration: none;
+		color: #FFFFFF;
+}
+
+.navbar{
+		grid-column: 1 / 4;
+		grid-row: 2 / 3;
+		background: #60A5FA;
+		color: #FFFFFF;
+		padding: 0 0.25em 0 0.25em;
+}
+
+ul {
+		list-style: none;
+}
+
+ul li {
+		display: inline-block;
+}
+
+ul li:hover{
+		cursor: pointer;
+		text-decoration: underline;
+		color: #1E53E4;
+}
+
+.overview{
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: #F9F9FB;
+}
+
+table{
+		width: 80%;
+		margin: 1em 0 1em 0;
+		border: 2px solid #60A5FA;
+}
+
+caption{
+		font-size: 1.5em;
+		background: #60A5FA;
+		color: #FFFFFF;
+}
+
+tr:nth-child(odd){
+		background: #BFDBFE;
+}
+
+tr:nth-child(even){
+		background: #DBEAFE;
+}
+
+#course_overview{
+		display: none;
+}
+
+#course_overview tr:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		color: #1E53E4;
+}
+
+#mathematics_students{
+		display: none;
+}
+
+#programming_students{
+		display: none;
+}
+
+#computer_networks_students{
+		display: none;
+}

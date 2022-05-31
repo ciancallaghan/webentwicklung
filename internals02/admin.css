@@ -1,0 +1,112 @@
+body {
+		background: #E3E3E3;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+}
+
+.container {
+		display: grid;
+		grid-template-columns: 5% 8fr 5%;
+		grid-template-rows: 5% 5% auto;
+}
+
+header {
+		grid-column: 1 / 4;
+		grid-row: 1 / 2;
+		display: inline-block;
+		padding-left: 1em;
+		background: #1D4ED8;
+		color: #FFFFFF;
+}
+
+header a {
+		text-decoration: none;
+		color: #FFFFFF;
+}
+
+.navbar {
+		grid-column: 1 / 4;
+		grid-row: 2 / 3;
+		background: #60A5fA;
+		color: #FFFFFF;
+		padding: 0 0.25em 0 0.25em;
+}
+
+ul {
+		list-style: none;
+}
+
+ul li {
+		display: inline-block;
+}
+
+ul li:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		color: #1E53E4;
+}
+
+.overview {
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: #F9F9Fb;
+}
+
+table {
+		width: 80%;
+		margin: 1em 0 1em 0;
+		border: 2px solid #60A5FA;
+}
+
+caption {
+		font-size: 1.5em;
+		background: #60A5FA;
+		color: #FFFFFF;
+}
+
+th {
+		background: #2454D9;
+		color: #FFFFFF;
+}
+
+tr:nth-child(odd) {
+		background: #BFDBFE;
+}
+
+tr:nth-child(even) {
+		background: #DBEAFE;
+}
+
+form {
+		border: 2px solid #60A5FA;
+		margin: 1em 0 1em 0;
+		padding: 0 1em 0.5em 1em;
+}
+
+legend {
+		font-size: 1.5em;
+		background: #60A5FA;
+		color: #FFFFFF;
+		text-align: center;
+		margin-bottom: 1em;
+}
+
+#student_overview {
+		display: none;
+}
+
+#staff_overview {
+		display: none;
+}
+
+#add_student_form {
+		display: none;
+}
+
+#add_staff_form {
+		display: none;
+}

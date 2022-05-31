@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="utf_8">
+				<title>Login Page</title>
+				<link type="text/css" rel="stylesheet" href="./login.css">
+		</head>
+		<body>
+				<div class="container">
+						<header>
+								<h1>University</h1>
+						</header>
+						<div class="login" id="staff_login_form">
+								<h2>Staff Login</h2>
+								<form>
+										<label for="username">Username:</label><br>
+										<input type="text" id="staff_username" name="username" required><br>
+										<label for="password">Password:</label><br>
+										<input type="password" id="staff_password" name="password" required><br>
+										<button class="login_button" id="staff_login">Login</button><br>
+								</form>
+								<p id="staff_warning">
+										Too many failed attempts.<br>
+										Login Blocked
+								</p>
+						</div>
+						<div class="login" id="admin_login_form">
+								<h2>Admin Login</h2>
+								<form>
+										<label for="username">Username:</label><br>
+										<input type="text" id="admin_username" name="username" required><br>
+										<label for=password">Password:</label><br>
+										<input type="password" id="admin_password" name="password" required><br>
+										<button class="login_button" id="admin_login">Login</button><br>
+								</form>
+								<p id="admin_warning">
+										Too many failed attempts.<br>
+										Login Blocked
+								</p>
+						</div>
+				</div>
+		</body>
+				<script src="./login.js"></script>
+</html>
