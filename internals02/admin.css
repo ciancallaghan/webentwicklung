@@ -95,6 +95,10 @@ legend {
 		margin-bottom: 1em;
 }
 
+.filters {
+		font-size: 0.75em;
+}
+
 #student_overview {
 		display: none;
 }
