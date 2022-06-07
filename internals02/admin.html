@@ -19,6 +19,7 @@
 										<li id="staff_button">Staff</li>
 								</ul>
 						</div>
+						<div id="courses">
 						<div class="overview" id="student_overview">
 								<table id="student_table">
 										<caption>
@@ -30,12 +31,12 @@
 												<br>
 												<div class="filters">
 														<label for="filter_department">Department</label>
-														<select name="filter_department" id="filter_department" onchange="filterDepartment()">
+														<select name="filter_department" id="filter_department" onchange="table_filter()">
 																<option value="" selected></option>
 																<option value="Business">Business</option>
 														</select>
 														<label for="filter_semester">Semester</label>
-														<select name="filter_semester" id="filter_semester" onchange="filterSemester()">
+														<select name="filter_semester" id="filter_semester" onchange="table_filter()">
 																<option value=""></option>
 																<option value="Winter">Winter</option>
 																<option value="Summer">Summer</option>
@@ -183,6 +184,7 @@
 										<input type="Submit" id="submit_add_staff_form" value="Add">
 										<input type="Reset" id="cancel_add_staff_form" value="Cancel">
 								</form>
+						</div>
 						</div>
 				</div>
 				<script src="./admin.js"></script>

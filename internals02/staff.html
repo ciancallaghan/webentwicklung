@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="utf-8">
+				<title>Staff Page</title>
+				<link rel="stylesheet" type="text/css" href="./staff.css">
+		</head>
+		<body>
+				<div class="container">
+						<div class="header">
+								<h1><a href="./login.html">University</a></h1>
+						</div>
+						<div class="navbar">
+								<ul>
+										<li id="home_button">Home</li>
+										<li>|</li>
+										<li id="courses_button">Courses</li>
+								</ul>
+						</div>
+						<div class="overview" id="course_overview">
+								<table id="course_table">
+										<caption>
+												Course Overview
+										</caption>
+										<tr class="course_link">
+												<td id="mathematics_button">Mathematics</td>
+										</tr>
+										<tr class="course_link">
+												<td id="programming_button">Programming</td>
+										</tr>
+										<tr class="course_link">
+												<td id="computer_networks_button">Computer Networks</td>
+										</tr>
+								</table>
+						</div>
+						<div id="courses">
+								<div class="overview" id="filters">
+												<label for="filter_department">Department</label>
+												<select name="filter_department" id="filter_department" onchange="table_filter()">
+														<option value="" selected></option>
+														<option value="Business">Business</option>
+														<option value="Energy &amp; Information">Energy &amp; Information</option>
+												</select>
+												<label for="filter_semester">Semester</label>
+												<select name="filter_semester" id="filter_semester" onchange="table_filter()">
+														<option value="" selected></option>
+														<option value="Winter">Winter</option>
+														<option value="Summer">Summer</option>
+												</select>
+								</div>
+								<div class="overview" id="mathematics_overview">
+										<table id="mathematics_table">
+												<caption>
+														Mathematics
+												</caption>
+												<tr>
+														<th>Student ID</th>
+														<th>Name</th>
+														<th>Surname</th>
+														<th>DOB</th>
+														<th>Gender</th>
+														<th>Department</th>
+														<th>E-Mail</th>
+														<th>Joining Date</th>
+												</tr>
+												<tr>
+														<td>001</td>
+														<td>John</td>
+														<td>Doe</td>
+														<td>2000-01-01</td>
+														<td>Male</td>
+														<td>Business</td>
+														<td>johndoe@email.com</td>
+														<td>2016-05-12</td>
+												</tr>
+												<tr>
+														<td>002</td>
+														<td>Jane</td>
+														<td>Doe</td>
+														<td>2001-02-02</td>
+														<td>Female</td>
+														<td>Energy &amp; Information</td>
+														<td>janedoe@email.com</td>
+														<td>2016-06-12</td>
+												</tr>
+												<tr>
+														<td>003</td>
+														<td>John</td>
+														<td>Smith</td>
+														<td>2003-02-02</td>
+														<td>Male</td>
+														<td>Energy &amp; Information</td>
+														<td>johnsmith@email.com</td>
+														<td>2016-05-12</td>
+												</tr>
+												<tr>
+														<td>004</td>
+														<td>Jane</td>
+														<td>Smith</td>
+														<td>2003-04-04</td>
+														<td>Female</td>
+														<td>Business</td>
+														<td>janesmith@email.com</td>
+														<td>2016-10-12</td>
+												</tr>
+										</table>
+								</div>
+								<div class="overview" id="programming_overview">
+										<table id="programming_table">
+												<caption>
+														Programming
+												</caption>
+												<tr>
+														<th>Student ID</th>
+														<th>Name</th>
+														<th>Surname</th>
+														<th>DOB</th>
+														<th>Gender</th>
+														<th>Department</th>
+														<th>E-Mail</th>
+														<th>Joining Date</th>
+												</tr>
+												<tr>
+														<td>001</td>
+														<td>John</td>
+														<td>Doe</td>
+														<td>2000-01-01</td>
+														<td>Male</td>
+														<td>Business</td>
+														<td>johndoe@email.com</td>
+														<td>2016-05-12</td>
+												</tr>
+												<tr>
+														<td>002</td>
+														<td>Jane</td>
+														<td>Doe</td>
+														<td>2001-02-02</td>
+														<td>Female</td>
+														<td>Energy &amp; Information</td>
+														<td>janedoe@email.com</td>
+														<td>2016-06-12</td>
+												</tr>
+										</table>
+								</div>
+								<div class="overview" id="computer_networks_overview">
+										<table id="computer_networks_table">
+												<caption>
+														Computer Networks
+												</caption>
+												<tr>
+														<th>Student ID</th>
+														<th>Name</th>
+														<th>Surname</th>
+														<th>DOB</th>
+														<th>Gender</th>
+														<th>Department</th>
+														<th>E-Mail</th>
+														<th>Joining Date</th>
+												</tr>
+												<tr>
+														<td>003</td>
+														<td>John</td>
+														<td>Smith</td>
+														<td>2003-02-02</td>
+														<td>Male</td>
+														<td>Energy &amp; Information</td>
+														<td>johnsmith@email.com</td>
+														<td>2016-05-12</td>
+												</tr>
+												<tr>
+														<td>004</td>
+														<td>Jane</td>
+														<td>Smith</td>
+														<td>2003-04-04</td>
+														<td>Female</td>
+														<td>Business</td>
+														<td>janesmith@email.com</td>
+														<td>2016-10-12</td>
+												</tr>
+										</table>
+								</div>
+						</div>
+						<script src="./staff.js"></script>
+				</div>
+		</body>
+</html>
