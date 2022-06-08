@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="utf-8">
+				<title>Admin Page</title>
+				<link rel="stylesheet" type="text/css" href="./admin.css">
+		</head>
+		<body>
+				<div class="container">
+						<header>
+								<h1><a href="./login.html">University</a></h1>
+						</header>
+						<div class="navbar">
+								<ul>
+										<li id="home_button">Home</li>
+										<li>|</li>
+										<li id="students_button">Students</li>
+										<li>|</li>
+										<li id="staff_button">Staff</li>
+								</ul>
+						</div>
+						<div id="courses">
+						<div class="overview" id="student_overview">
+								<table id="student_table">
+										<caption>
+												Student Overview<br>
+												<button id="add_student_button">Add</button>
+												<button>Update</button>
+												<button>Delete</button>
+												<br>
+												<br>
+												<div class="filters">
+														<label for="filter_department">Department</label>
+														<select name="filter_department" id="filter_department" onchange="table_filter()">
+																<option value="" selected></option>
+																<option value="Business">Business</option>
+														</select>
+														<label for="filter_semester">Semester</label>
+														<select name="filter_semester" id="filter_semester" onchange="table_filter()">
+																<option value=""></option>
+																<option value="Winter">Winter</option>
+																<option value="Summer">Summer</option>
+														</select>
+												</div>
+										</caption>
+										<tr>
+												<th>Student ID</th>
+												<th>Name</th>
+												<th>Surname</th>
+												<th>DOB</th>
+												<th>Gender</th>
+												<th>Department</th>
+												<th>E-Mail</th>
+												<th>Joining Date</th>
+										</tr>
+										<tr>
+												<td>001</td>
+												<td>John</td>
+												<td>Doe</td>
+												<td>2000-01-01</td>
+												<td>Male</td>
+												<td>Business</td>
+												<td>johndoe@email.com</td>
+												<td>2016-05-12</td>
+										</tr>
+										<tr>
+												<td>002</td>
+												<td>Jane</td>
+												<td>Doe</td>
+												<td>2001-02-02</td>
+												<td>Female</td>
+												<td>Energy &amp; Information</td>
+												<td>janedoe@email.com</td>
+												<td>2016-06-12</td>
+										</tr>
+										<tr>
+												<td>003</td>
+												<td>John</td>
+												<td>Smith</td>
+												<td>2003-02-02</td>
+												<td>Male</td>
+												<td>Energy &amp; Information</td>
+												<td>johnsmith@email.com</td>
+												<td>2016-05-12</td>
+										</tr>
+										<tr>
+												<td>004</td>
+												<td>Jane</td>
+												<td>Smith</td>
+												<td>2003-04-04</td>
+												<td>Female</td>
+												<td>Business</td>
+												<td>janesmith@email.com</td>
+												<td>2016-10-12</td>
+										</tr>
+								</table>
+						</div>
+						<div class="overview" id="staff_overview">
+								<table id="staff_table">
+										<caption>
+												Staff Overview<br>
+												<button id="add_staff_button">Add</button>
+												<button>Update</button>
+												<button>Delete</button>
+										</caption>
+										<tr>
+												<th>Staff ID</th>
+												<th>Name</th>
+												<th>Surname</th>
+												<th>DOB</th>
+												<th>Gender</th>
+												<th>E-Mail</th>
+										</tr>
+								</table>
+						</div>
+						<div class="overview" id="add_student_form">
+								<form id="add_student" onsubmit="submitAddStudentForm(event)">
+										<legend>Add Student</legend>
+										<label for="student_id">Student ID:</label><br>
+										<input type="text" name="student_id" required><br>
+										<br>
+										<label for="name">Name:</label><br>
+										<input type="text" name="name" required><br>
+										<br>
+										<label for="surname">Surname:</label><br>
+										<input type="text" name="surname"><br>
+										<br>
+										<label for="dob">Date of Birth:</label><br>
+										<input type="date" name="dob"><br>
+										<br>
+										<label for="gender">Gender:</label><br>
+										<input type="radio" id="male" name="gender" value="Male">
+										<label for="male">Male</label>
+										<input type="radio" id="female" name="gender" value="Female">
+										<label for="female">Female</label>
+										<input type="radio" id="other" name="gender" value="Other">
+										<label for="other">Other</label><br>
+										<br>
+										<label for="department">Department:</label><br>
+										<select name="department" required>
+												<option value="Energy &amp; Information">Energy &amp; Information</option>
+												<option value="Technology &amp; Life">Technology &amp; Life</option>
+												<option value="Business">Business</option>
+												<option value="Computing, Communication &amp; Business">Computing, Communication &amp; Business</option>
+												<option value="Design &amp; Culture">Design &amp; Culture</option>
+										</select><br>
+										<br>
+										<label for="email">E-Mail:</label><br>
+										<input type="email" name="email" required><br>
+										<br>
+										<label for="joining_date">Joining Date:</label><br>
+										<input type="date" name="joining_date"><br>
+										<br>
+										<input type="Submit" id="submit_add_student_form" value="Add">
+										<input type="Reset" id="cancel_add_student_form" value="Cancel">
+								</form>
+						</div>
+						<div class="overview" id="add_staff_form">
+								<form id="add_staff" onsubmit="submitAddStaffForm(event)">
+										<legend>Add Staff</legend>
+										<label for="staff_id">Staff ID:</label><br>
+										<input type="text" name="staff_id" required><br>
+										<br>
+										<label for="name">Name:</label><br>
+										<input type="text" name="name" required><br>
+										<br>
+										<label for="surname">Surname:</label><br>
+										<input type="text" name="surname"><br>
+										<br>
+										<label for="dob">Date of Birth:</label><br>
+										<input type="date" name="dob"><br>
+										<br>
+										<label for="gender">Gender:</label<br>
+										<input type="radio" id="male" name="gender" value="Male">
+										<label for="male">Male</label>
+										<input type="radio" id="female" name="gender" value="Female">
+										<label for="female">Female</label>
+										<input type="radio" id="other" name="gender" value="Other">
+										<label for="other">Other</label><br>
+										<br>
+										<label for="email">E-Mail:</label><br>
+										<input type="email" name="email" required><br>
+										<br>
+										<input type="Submit" id="submit_add_staff_form" value="Add">
+										<input type="Reset" id="cancel_add_staff_form" value="Cancel">
+								</form>
+						</div>
+						</div>
+				</div>
+				<script src="./admin.js"></script>
+		</body>
+</html>
