@@ -89,6 +89,57 @@ function table_filter() {
 		}
 }
 
+function addStudent() {
+		event.preventDefault();
+
+		// Check DOB
+		var current_date = new Date();
+		var min17 = new Date();
+		var max60 = new Date();
+		current_date = new Date(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
+		min17.setFullYear(min17.getFullYear() - 17);
+		max60.setFullYear(max60.getFullYear() - 60);
+		var student_dob = new Date(
+				Date.parse(
+						document.getElementById("add_student")[3].value
+				)
+		);
+
+		if (student_dob > current_date) {
+				alert("Invalid DOB");
+		}
+		else if (student_dob > min17) {
+				alert("Invalid DOB");
+		}
+		else if (student_dob < max60) {
+				alert("Invalid DOB");
+		}
+
+		// Check Joining Date
+		var earliest_join = new Date(2015, 0);
+		var joining_date = new Date(
+				Date.parse(document.getElementById("add_student")[9].value)
+		);
+		if (joining_date < earliest_join) {
+				alert("Invalid Joining Date");
+		}
+}
+
+function addStaff() {
+		event.preventDefault();
+		
+		// Check DOB
+		var current_date = new Date();
+		current_date = new Date(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
+		var staff_dob = new Date(
+				Date.parse(document.getElementById("add_staff")[3].value)
+		);
+
+		if (staff_dob > current_date) {
+				alert("Invalid DOB");
+		}
+}
+
 let home_button = document.getElementById("home_button");
 let students_button = document.getElementById("students_button");
 let staff_button = document.getElementById("staff_button");
