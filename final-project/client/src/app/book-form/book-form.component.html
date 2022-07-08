@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Add Book</h1>
+<div mat-dialog-content>
+    <form [formGroup]="bookForm">
+        <mat-form-field appearance="standard" color="accent">
+            <mat-label>Title</mat-label>
+            <input type="text" matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field appearance="standard" color="accent">
+            <mat-label>Author</mat-label>
+            <input type="text" matInput formControlName="author">
+        </mat-form-field>
+        <mat-form-field appearance="standard" color="accent">
+            <mat-label>Genre</mat-label>
+            <mat-select formControlName="genre">
+                <mat-option *ngFor="let genre of genres" [value]="genre">
+                    {{genre}}
+                </mat-option>
+            </mat-select>
+            <!-- <input type="text" matInput formControlName="genre"> -->
+        </mat-form-field>
+        <label for="">Owned</label>
+        <mat-radio-group formControlName="owned">
+            <mat-radio-button [value]="true">
+                Yes
+            </mat-radio-button>
+            <mat-radio-button [value]="false">
+                No
+            </mat-radio-button>
+        </mat-radio-group>
+        <label for="">Read</label>
+        <mat-radio-group formControlName="read">
+            <mat-radio-button [value]="true">
+                Yes
+            </mat-radio-button>
+            <mat-radio-button [value]="false">
+                No
+            </mat-radio-button>
+        </mat-radio-group>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="accent" (click)="addBook()">{{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>

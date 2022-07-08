@@ -1,0 +1,22 @@
+.mat-card{
+    margin: 10px 4% 10px 4%;
+    width: 90%;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.buttonLayout{
+    margin:10px 0 10px 4%;
+}
+
+table{
+    width: 100%;
+    table-layout: auto;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
